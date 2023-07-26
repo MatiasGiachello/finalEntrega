@@ -6,12 +6,16 @@
 }
 
 html {
-  background-color: #ECE9E6;
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20230404/pngtree-cup-with-mate-tea-in-the-hands-of-a-manyerba-mate-photo-image_2244188.jpg"); 
 }
 
 a {
-  background: #ECE9E6;
-background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  
-background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  /* background: #f8b36e;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); */
+  /* background-color: rgb(255, 255, 255); */
+  color: white;
 
+}
+h1{
+  color: white;
 }
