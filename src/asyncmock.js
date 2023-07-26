@@ -17,26 +17,20 @@ export const getProductos = () => {
     })
 }
 
-
-//Creamos una nueva función similar a la anterior pero qu enos retorne un solo item: 
-
 export const getUnProducto = (id) => {
     return new Promise(resolve => {
-        setTimeout( () => {
-            const producto = misProductos.find(prod=> prod.id === id);
+        setTimeout(() => {
+            const producto = misProductos.find(prod => prod.id === id);
             resolve(producto);
         }, 100)
     })
 }
 
-
-//Creamos una función que retora un array de una determinada categoría de producto: 
-
 export const getProductosPorCategoria = (idCategoria) => {
-    return new Promise ( resolve => {
-        setTimeout( () => {
+    return new Promise(resolve => {
+        setTimeout(() => {
             const productosCategoria = misProductos.filter(prod => prod.idCat === idCategoria);
             resolve(productosCategoria);
-        }, 100 )
+        }, 100)
     })
 }
