@@ -9,30 +9,32 @@ import "./ItemDetail.css"
 
 const ItemDetail = ({ id, nombre, precio, img, stock }) => {
   const [agregarCantidad, setAgregarCantidad] = useState(0);
-
   const { agregarProducto } = useContext(CarritoContext);
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-
     const item = { id, nombre, cantidad, precio };
     agregarProducto(item, cantidad);
-  }
+  };
 
   return (
-    <div>
-      <h2>Nombre: {nombre} </h2>
-      <h3>Precio: {precio} </h3>
-      <h3>ID: {id} </h3>
-      <p>Informacion de nuestros productos, precio, calidad, Aca no mentimos Tenemos la mejor calidad en los Mates, y al MEJOR precio</p>
-      <img src={img} alt={nombre} />
-
-      {
-        agregarCantidad > 0 ? (<Link className='miBtn' to="/cart"> Terminar compra </Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
-      }
-
+    <div className="card">
+      <div className="card-content">
+        <h2 className="item-name">Nombre: {nombre}</h2>
+        <h3 className="item-price">Precio: ${precio}</h3>
+        <h3 className="item-id">ID: {id}</h3>
+        <p className="item-description">La mejor calidad garantizada</p>
+        <img className="item-image" src={img} alt={nombre} />
+        {agregarCantidad > 0 ? (
+          <Link className="finish-btn" to="/cart">
+            Terminar compra
+          </Link>
+        ) : (
+          <ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;

@@ -7,6 +7,7 @@
 
 html {
   background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20230404/pngtree-cup-with-mate-tea-in-the-hands-of-a-manyerba-mate-photo-image_2244188.jpg"); 
+  background-size: cover;
 }
 
 a {
@@ -16,6 +17,12 @@ a {
   color: white;
 
 }
+
 h1{
   color: white;
+}
+
+body {
+  font-family: 'Courier Prime', monospace;
+  font-family: 'Poppins', sans-serif;
 }

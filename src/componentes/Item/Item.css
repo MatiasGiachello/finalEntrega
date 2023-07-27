@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-evenly;
     border: 1px solid black;
-    height: 16rem;
+    height: auto;
 }
 
 .cardProducto:hover {
@@ -18,7 +18,7 @@
 
 .imgProducto {
     width: 90px;
-    height: 90px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
